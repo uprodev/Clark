@@ -5,8 +5,6 @@ if (!defined('ABSPATH')) {
 
 /*Custom Images Size*/
 if (function_exists('add_image_size')) {
-  add_image_size('320x170', 320, 170, true);
-
-  add_image_size('logo_size', 165, 48, false);
+  add_image_size('logo_size', 200, 45, false);
 }
 /*Custom Images Size*/

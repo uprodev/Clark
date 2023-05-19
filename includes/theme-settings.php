@@ -41,9 +41,7 @@ function clark_setup()
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus(
     array(
-      'menu-1' => esc_html__('Menu-Header', 'clark'),
-      'menu-2' => esc_html__('Menu-Footer', 'clark'),
-      'menu-3' => esc_html__('Menu-Mobile', 'clark'),
+      'menu-1' => esc_html__('Menu-Mobile', 'clark'),
     )
   );
 
@@ -86,6 +84,12 @@ if ('disable_gutenberg') {
 
 /* Remove <p> and <br /> from Contact Form 7 */
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+add_filter('wpcf7_form_elements', function ($content) {
+  $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+  return $content;
+});
 
 // Adds SVG to the list of allowed downloads.
 add_filter('upload_mimes', 'svg_upload_allow');
