@@ -123,3 +123,30 @@ function fix_svg_mime_type($data, $file, $filename, $mimes, $real_mime = '')
 
 remove_action('load-update-core.php', 'wp_update_plugins');
 wp_clear_scheduled_hook('wp_update_plugins');
+
+/**
+ * Remove the slug from published post permalinks. Only affect our custom post type, though.
+ */
+function wptw_remove_cpt_slug($post_link, $post)
+{
+
+  if ('cases' === $post->post_type && 'publish' === $post->post_status) {
+    $post_link = str_replace('/' . $post->post_type . '/', '/', $post_link);
+  }
+  return $post_link;
+}
+add_filter('post_type_link', 'wptw_remove_cpt_slug', 10, 2);
+
+
+function wptw_parse_request($query)
+{
+
+  if (!$query->is_main_query() || 2 != count($query->query) || !isset($query->query['page'])) {
+    return;
+  }
+
+  if (!empty($query->query['name'])) {
+    $query->set('post_type', array('post', 'cases', 'page'));
+  }
+}
+add_action('pre_get_posts', 'wptw_parse_request');
