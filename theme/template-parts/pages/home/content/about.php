@@ -31,9 +31,7 @@ $contact_form_shortcode = get_field('contact_form_shortcode');
           </h2>
         <?php endif; ?>
         <?php if ($text_about) : ?>
-          <div class="">
-            <?php echo $text_about; ?>
-          </div>
+          <?php echo $text_about; ?>
         <?php endif; ?>
         <?php if ($benefits_about) : ?>
           <ul>

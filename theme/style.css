@@ -6,3 +6,7 @@ Author URI: ##
 Description: *
 Version: 1.0.0
 */
+
+figure img{
+  height: auto;
+}

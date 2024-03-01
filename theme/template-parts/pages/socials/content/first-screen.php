@@ -19,9 +19,7 @@ $image_first_screen = get_field('image_first_screen');
           </h1>
         <?php endif; ?>
         <?php if ($text_first_screen) : ?>
-          <div class="">
             <?php echo $text_first_screen; ?>
-          </div>
         <?php endif; ?>
         <?php if ($button_first_first_screen || $button_second_first_screen) :
           $link_url = $button_first_first_screen['url'];
