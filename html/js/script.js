@@ -119,8 +119,8 @@ jQuery(document).ready(function ($) {
   //28.02.24
   $(document).on('click', '.video-block', function (e){
     $('.video-file').get(0).play();
-    $('.video-section .bg').hide();
-    $('.video-section .icon-wrap').hide();
+    $('.video-block .bg').hide();
+    $('.video-block .icon-wrap').hide();
   });
 
   $(".fancybox-img").fancybox({
