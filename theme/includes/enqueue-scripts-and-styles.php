@@ -25,6 +25,7 @@ function clark_script()
   wp_enqueue_script('fancybox', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array(), null, true);
   wp_enqueue_script('sticky', get_template_directory_uri() . '/js/jquery.sticky.js', array(), null, true);
   wp_enqueue_script('rellax', get_template_directory_uri() . '/js/rellax.min.js', array(), null, true);
+  wp_enqueue_script('lottie', get_template_directory_uri() . '/js/lottie.min.js', array(), null, true);
   wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array(), time(), true);
 }
 

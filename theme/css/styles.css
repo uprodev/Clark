@@ -110,6 +110,13 @@ header {
 
 .top-line {
   padding: 50px 0;
+  background: #DC0000;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.is-sticky .top-line{
+  padding: 25px 0;
 }
 .top-line .logo-wrap {
   text-align: center;
@@ -124,7 +131,7 @@ header {
   left: 50%;
   transform: scale(0);
   opacity: 0;
-  content: "";
+/*  content: "";*/
   width: 200px;
   height: 200px;
   margin: -100px 0 0 -100px;
@@ -148,12 +155,12 @@ header {
 .top-line .logo-wrap a:hover:after {
   animation: showIn 1s linear;
 }
-.top-line .logo-wrap a:hover > img {
+/*.top-line .logo-wrap a:hover > img {
   opacity: 0;
 }
 .top-line .logo-wrap a:hover .open-menu {
   display: inline-block;
-}
+}*/
 
 @keyframes showIn {
   0% {
@@ -1580,4 +1587,84 @@ footer .right ul li:last-child {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover; }
+
+.top-line .content-width{
+  display: flex;
+  justify-content: space-between;
+}
+.top-line{
+  border-bottom: 4px solid #000;
+}
+
+.top-line .menu-wrap{
+  width: 50%;
+}
+
+.top-line .menu-wrap .open-menu-mob{
+  display: none;
+}
+.top-line .menu-wrap{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-line .menu-wrap ul{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 8px;
+}
+
+.top-line .menu-wrap ul li + li{
+  margin-left: 100px;
+}
+.top-line .menu-wrap ul li a{
+  color: #E9DED5;
+  display: inline-block;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.top-line .menu-wrap ul li a:hover{
+  opacity: 0.7;
+}
+
+.anim-wrap{
+  position: relative;
+}
+.anim-wrap .item{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 30px;
+  line-height: 1.2;
+  display: inline-block;
+  color: #070404;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+}
+.anim-wrap .item-1, .anim-wrap .item-4{
+  white-space: nowrap;
+}
+.anim-wrap .item-2, .anim-wrap .item-3{
+  width: 150px;
+}
+
+.anim-wrap .item-2{
+  left: 5%;
+  top: 50%;
+}
+.anim-wrap .item-3{
+  left: 95%;
+  top: 50%;
+}
+.anim-wrap .item-4{
+  top: 90%;
+  left: 50%;
+}
+.amin-wrap-black .item{
+  color: #E8DDD2;
+}
 /*# sourceMappingURL=styles.css.map */

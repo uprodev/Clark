@@ -1,6 +1,9 @@
 @media (max-width: 1875px) {
   .content-width {
     width: 1200px; }
+  .anim-wrap .item{
+    font-size: 22px;
+  }
 
   .about-head {
     padding: 150px 0 100px; }
@@ -356,6 +359,18 @@
   .title-text ul:before {
     bottom: 35px; }
 
+  .top-line .menu-wrap ul li a{
+    font-size: 22px;
+  }
+  .top-line .menu-wrap ul li + li {
+    margin-left: 50px;
+  }
+  .is-sticky .top-line{
+    padding: 15px 0;
+  }
+  .top-line{
+    border-width: 2px;
+  }
 }
 @media (max-width: 1500px) {
   .menu-responsive .wrap .mob-menu li a {
@@ -378,6 +393,7 @@
 
   .cases .bg h2 {
     font-size: 140px; }
+
 
   .case-inner {
     padding-top: 180px; } }
@@ -612,6 +628,37 @@
   .text-img .text {
     padding: 0; }
 
+  .top-line .menu-wrap ul{
+    display: none;
+  }
+  .top-line .menu-wrap .open-menu-mob{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 48px;
+  }
+  .top-line .menu-wrap .open-menu-mob img{
+    width: 18px;
+    filter: invert(99%) sepia(1%) saturate(3286%) hue-rotate(332deg) brightness(94%) contrast(94%);
+  }
+  .top-line .menu-wrap .open-menu-mob:before{
+    position: absolute;
+    top: -25px;
+    bottom: -25px;
+    width: 1px;
+    content: '';
+    background: #000;
+    left: 0;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+  .is-sricky .top-line .menu-wrap .open-menu-mob:before{
+    bottom: -15px;
+  }
+  .top-line{
+    border-width: 1px;
+  }
 }
 @media (max-width: 767px) {
   .content-width {
@@ -1279,6 +1326,50 @@
 
   .about .form-default .input-wrap-submit {
     margin-top: 42px; }
+  .text-img .btn-wrap{
+    flex-direction: column;
+  }
+  .text-img .btn-wrap a{
+    margin: 0 0 15px!important;
+    width: fit-content;
+  }
+  .top-line .menu-wrap .open-menu-mob:before{
+    bottom: -13px;
+  }
+  .top-line .menu-wrap .open-menu-mob{
+    position: relative;
+    left: 3px;
+  }
+  .top-line .menu-wrap .open-menu-mob img{
+    position: relative;
+    left: 5px;
+  }
+  .sticky-wrapper{
+    min-height: 48px;
+  }
+  .top-line .logo-wrap{
+    height: 15px;
+  }
+  .top-line .logo-wrap a{
+    line-height: 15px;
+  }
+  .top-line {
+    padding: 13px 0!important;
+  }
+  .anim-wrap .item{
+    font-size: 10px;
+  }
+  .anim-wrap .item-2, .anim-wrap .item-3{
+    width: 50px;
+  }
+  .anim-wrap .item-2{
+    left: 8%;
+    top: 50%;
+  }
+  .anim-wrap .item-3{
+    left: 92%;
+    top: 50%;
+  }
 }
 
 /*# sourceMappingURL=responsive.css.map */

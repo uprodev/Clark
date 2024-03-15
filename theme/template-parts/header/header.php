@@ -26,13 +26,29 @@ $socials = get_field('socials', 'option');
               <?php else : ?>
                 <?php echo wp_get_attachment_image($logo, $logo_size); ?>
               <?php endif; ?>
-              <span class="open-menu">
-                <img src="<?php echo get_template_directory_uri() . '/img/menu.svg' ?>" alt="<?php the_title(); ?>">
-              </span>
+              <!--<span class="open-menu">
+                <img src="<?php /*echo get_template_directory_uri() . '/img/menu.svg' */?>" alt="<?php /*the_title(); */?>">
+              </span>-->
             </a>
           </figure>
         <?php endif; ?>
       </div>
+      <nav class="menu-wrap">
+        <!-- <ul>
+          <li><a href="#">De CLARK FORMULE</a></li>
+          <li><a href="#">OVER ONS</a></li>
+        </ul> -->
+        
+        <?php wp_nav_menu( array(
+          'theme_location'  => 'menu-1',
+          'container'       => '',
+          'items_wrap'      => '<ul>%3$s</ul>'
+        )); ?>
+
+        <a href="#" class="open-menu-mob">
+          <img src="<?= get_stylesheet_directory_uri() ?>/img/menu.svg" alt="About Us">
+        </a>
+      </nav>
     </div>
   </div>
 </header>

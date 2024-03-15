@@ -2,7 +2,7 @@ jQuery(document).ready(function ($) {
 
 
   /*menu-open*/
-  $(document).on('click', '.logo-wrap a', function (e){
+  $(document).on('click', '.open-menu-mob', function (e){
     e.preventDefault();
 
     $.fancybox.open( $('#menu-responsive'), {
@@ -132,4 +132,28 @@ jQuery(document).ready(function ($) {
       $('header').removeClass("is-team");
     }
   });
+
+  //fix header
+  $(".top-line").sticky({
+    topSpacing:0
+  });
+
+  //animation
+  var animation1 = bodymovin.loadAnimation({
+    container: document.getElementById('anim-01'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/wp-content/themes/clark/img/anim-1.json',
+  });
+
+//animation
+  var animation2 = bodymovin.loadAnimation({
+    container: document.getElementById('anim-02'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/wp-content/themes/clark/img/anim-2.json',
+  });
+
 });

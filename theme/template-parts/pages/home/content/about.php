@@ -20,6 +20,24 @@ $contact_form_shortcode = get_field('contact_form_shortcode');
         </div>
       <?php endif; ?>
       <div class="text-wrap">
+
+        <?php if(have_rows('items_about')): ?>
+
+          <div class="anim-wrap amin-wrap-black">
+            <div id="anim-02"></div>
+
+            <?php while(have_rows('items_about')): the_row() ?>
+
+              <?php if ($field = get_sub_field('text')): ?>
+                <div class="item item-<?= get_row_index() ?>"><?= $field ?></div>
+              <?php endif ?>
+
+            <?php endwhile ?>
+
+          </div>
+
+        <?php endif ?>
+
         <?php if ($sub_title) : ?>
           <p class="top">
             <?php echo $sub_title; ?>
